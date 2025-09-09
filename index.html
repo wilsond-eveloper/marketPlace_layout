@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+    <!-- ... Navbar ... -->
+    <nav class="bg-gray-900 text-white px-6 py-3 flex flex-col sm:flex-row items-center justify-between">
+      <!-- Logo y Hamburger (siempre visibles) -->
+      <div class="flex items-center justify-between w-full sm:w-auto">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <!-- <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" class="h-8 w-8"> -->
+          <h3 class="font-bold text-lg">SocialMarket</h3>
+          <span class="text-white">Marketplace</span>
+        </div>
+        <!-- Hamburger (mobile) -->
+        <button class="sm:hidden flex items-center px-3 py-2 border rounded text-gray-400" onclick="document.getElementById('search-and-user-info').classList.toggle('hidden')">
+          <svg class="fill-current h-5 w-5" viewBox="0 0 20 20">
+            <path d="M3 6h14M3 10h14M3 14h14"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Contenido colapsable (barra de búsqueda y user info) -->
+      <div id="search-and-user-info" class="hidden sm:flex flex-col sm:flex-row items-center w-full mt-3 sm:mt-0 sm:ml-4 sm:space-x-4">
+        <!-- Barra de Búsqueda -->
+        <div class="flex-1 w-full sm:flex sm:justify-center mb-3 sm:mb-0">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full sm:max-w-md px-4 py-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+        </div>
+        
+        <!-- User Info -->
+        <div class="flex items-center space-x-3">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="h-8 w-8 rounded-full border-2 border-indigo-500">
+          <div class="flex flex-col">
+            <span class="font-medium flex items-center space-x-2">
+              <span>Wilson</span>
+            </span>
+            <span class="flex items-center space-x-1 text-sm text-yellow-400 mt-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.176 0l-3.38 2.454c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/>
+              </svg>
+              <span class="text-white">4.8 Rating</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg-gray-800">
+      <div class="flex flex-row-reverse mr-6">
+        <div class="text-white">
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full mt-4">Vender</button>
+        </div>
+      </div>
+    </div>
+      
+
+    <!-- ...existing code... -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-6 py-8 bg-gray-800">
+      <!-- Estadísticas generales -->
+      <div class="bg-gray-950 rounded-lg p-6 flex flex-col justify-between md:col-span-1 mb-6 md:mb-0">
+        <h2 class="text-white text-xl font-bold mb-4">Estadísticas</h2>
+        <div class="mb-3">
+          <span class="text-gray-400 text-sm">Total Ventas:</span>
+          <span class="text-white font-bold block text-lg">405</span>
+        </div>
+        <div class="mb-3">
+          <span class="text-gray-400 text-sm">Productos en Stock:</span>
+          <span class="text-white font-bold block text-lg">45</span>
+        </div>
+        <div>
+          <span class="text-gray-400 text-sm">Valoración Promedio:</span>
+          <span class="flex items-center mt-1">
+            <svg class="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.176 0l-3.38 2.454c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/>
+            </svg>
+            <span class="text-white font-bold">4.7</span>
+          </span>
+        </div>
+      </div> 
+      <!-- Productos -->
+      <div class="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- ...existing code... -->
+          <!-- Producto 1 -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
+          <img src="https://images.unsplash.com/vector-1755786998521-ad2cf299f1a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8Mjd8fHxlbnwwfHx8fHw%3D" alt="Producto 1" class="object-cover w-full h-40">
+          <div class="p-4 flex-1 flex flex-col justify-between overflow-auto max-h-56">
+            <h3 class="text-white font-bold text-lg mb-1">Auriculares Bluetooth</h3>
+            <p class="text-gray-400 text-sm mb-2">Auriculares inalámbricos con cancelación de ruido y batería de larga duración.</p>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-yellow-400 font-bold text-lg">$49.99</span>
+              <span class="flex items-center text-xs text-gray-400">
+                <svg class="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.176 0l-3.38 2.454c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/>
+                </svg>
+                4.7
+              </span>
+            </div>
+            <div class="flex items-center mt-2">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Vendedor" class="h-7 w-7 rounded-full border-2 border-indigo-500 mr-2">
+              <span class="text-white text-sm">Carlos Ruiz</span>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Producto 2" class="object-cover w-full h-40">
+          <div class="p-4 flex-1 flex flex-col justify-between overflow-auto max-h-56">
+            <h3 class="text-white font-bold text-lg mb-1">Smartwatch Fitness</h3>
+            <p class="text-gray-400 text-sm mb-2">Reloj inteligente resistente al agua, ideal para monitorear tu actividad física.</p>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-yellow-400 font-bold text-lg">$79.00</span>
+              <span class="flex items-center text-xs text-gray-400">
+                <svg class="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.176 0l-3.38 2.454c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/>
+                </svg>
+                4.5
+              </span>
+            </div>
+            <div class="flex items-center mt-2">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Vendedora" class="h-7 w-7 rounded-full border-2 border-indigo-500 mr-2">
+              <span class="text-white text-sm">María López</span>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Producto 3" class="object-cover w-full h-40">
+          <div class="p-4 flex-1 flex flex-col justify-between overflow-auto max-h-56">
+            <h3 class="text-white font-bold text-lg mb-1">Cámara Deportiva 4K</h3>
+            <p class="text-gray-400 text-sm mb-2">Cámara resistente con grabación 4K, perfecta para aventuras al aire libre.</p>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-yellow-400 font-bold text-lg">$120.00</span>
+              <span class="flex items-center text-xs text-gray-400">
+                <svg class="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.176 0l-3.38 2.454c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/>
+                </svg>
+                4.9
+              </span>
+            </div>
+            <div class="flex items-center mt-2">
+              <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Vendedor" class="h-7 w-7 rounded-full border-2 border-indigo-500 mr-2">
+              <span class="text-white text-sm">Luis Pérez</span>
+            </div>
+          </div>
+        </div>
+        <!-- ...existing code... -->
+      </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/custom.js"></script>
+  </body>
+</html>
